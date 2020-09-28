@@ -1,6 +1,10 @@
 .logo {
   font-family: $logo-font;
-  @include font (26px, 1.19, 700);
+  @include font (24px, 1.17, 700);
+
+  @include for-size(desktop) {
+    @include font (26px, 1.19, 700);
+  }
 }
 .logo--black {
   margin-right: 93px;

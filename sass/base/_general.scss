@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  outline: 2px solid tomato;
+}
+
 body {
   background-color: $main-bg-color;
   color: $main-text-color;
@@ -35,11 +41,23 @@ svg {
 }
 
 .container {
-  width: 1200px;
-  margin: 0px auto;
+  width: 100%;
   padding: 0px 15px;
+  margin: 0px auto;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+   @include for-size(desktop) {
+    width: 1200px;
+  }
 }
 
-.flex {
-  @include flexbox;
-}
+// .flex {
+//   @include flexbox;
+// }

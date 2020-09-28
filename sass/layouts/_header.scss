@@ -1,12 +1,21 @@
 .header {
+  padding-top: 16px;
+  padding-bottom: 16px;
   @include font(inherit, 1.14, 500);
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
 }
 
-.flex--ai-center,
+// .flex--ai-center,
+// .header-nav {
+//   @include flexbox(flex-start, center);
+// }
+
 .header-nav {
-  @include flexbox(flex-start, center);
+  display: none;
+  @include for-size(tablet) {
+    @include flexbox(flex-start, center);
+  }
 }
 
 .header-nav__item {
@@ -45,6 +54,10 @@
 }
 
 .header-contacts {
+   @media screen and (max-width: 767px) {
+    display: none;
+  }
+  
   display: flex;
   margin-left: auto;
 }
