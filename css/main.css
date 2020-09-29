@@ -480,7 +480,7 @@ svg {
   align-items: center;
   flex-direction: column;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin: 0 auto;
   background-color: #c4c4c4;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero.jpg");
@@ -490,16 +490,32 @@ svg {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .hero {
+    height: 600px;
+  }
+}
+
 .hero__title {
   margin-top: 0;
   margin-bottom: 30px;
-  max-width: 696px;
-  font-size: 44px;
-  line-height: 1.36;
+  max-width: 360px;
+  font-size: 26px;
+  line-height: 1.62;
   font-weight: 900;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+    font-weight: 900;
+  }
 }
 
 .button-primary {
@@ -535,16 +551,49 @@ svg {
 }
 
 .feature {
-  padding-top: 94px;
-  padding-bottom: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.feature-list__item {
-  flex-basis: calc((100% - 3 * 30px) / 4);
+@media (min-width: 1200px) {
+  .feature {
+    padding-top: 94px;
+    padding-bottom: 0;
+  }
 }
 
-.feature-list__item:not(:last-child) {
-  margin-right: 30px;
+@media (min-width: 768px) {
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-list {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-list__item {
+    margin: 15px;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-list__item {
+    margin-bottom: 0;
+    flex-basis: calc((100% - 4 * 30px) / 4);
+  }
 }
 
 .feature-list__thumb {
@@ -569,6 +618,12 @@ svg {
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .feature-list__title {
+    text-align: center;
+  }
 }
 
 .feature-list__text {
@@ -767,7 +822,6 @@ svg {
 }
 
 .footer-subscribe {
-  width: 570px;
   align-items: flex-end;
 }
 
