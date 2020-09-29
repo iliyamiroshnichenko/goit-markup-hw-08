@@ -69,7 +69,7 @@
       <section class="feature">
         <div class="container">
           <h2 class="visually-hidden">Преимущества</h2>
-          <ul class="list flex feature-list">
+          <ul class="list feature-list">
             <li class="feature-list__item">
               <div class="feature-list__thumb">
                 <svg class="feature-list__icon">
@@ -125,7 +125,7 @@
       <section class="section examples">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
-          <ul class="list flex examples-list">
+          <ul class="list examples-list">
             <li class="examples-list__item">
               <img
                 src="./images/examples/desktopapp.jpg"
@@ -163,17 +163,17 @@
       <section class="section section--gray">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
-          <ul class="list flex team-list">
+          <ul class="list team-list">
             <!--Первый сотрудник-->
             <li class="team-list__item">
               <img
                 src="./images/our-team/igor-dem.jpg"
                 alt="Игорь Демьяненко"
-                width="270"
+                width="100%"
               />
               <h3 class="team-list__title">Игорь Демьяненко</h3>
               <p class="team-list__text">Product Designer</p>
-              <ul class="list flex network-list--centered">
+              <ul class="list network-list network-list--centered">
                 <li class="network-list__item">
                   <a
                     href="#"
@@ -225,11 +225,11 @@
               <img
                 src="./images/our-team/olg-rep.jpg"
                 alt="Ольга Репина"
-                width="270"
+                width="100%"
               />
               <h3 class="team-list__title">Ольга Репина</h3>
               <p class="team-list__text">Frontend Developer</p>
-              <ul class="list flex network-list network-list--centered">
+              <ul class="list network-list">
                 <li class="network-list__item">
                   <a
                     href="#"
@@ -281,11 +281,11 @@
               <img
                 src="./images/our-team/nik-taras.jpg"
                 alt="Николай Тарасов"
-                width="270"
+                width="100%"
               />
               <h3 class="team-list__title">Николай Тарасов</h3>
               <p class="team-list__text">Marketing</p>
-              <ul class="list flex network-list network-list--centered">
+              <ul class="list network-list">
                 <li class="network-list__item">
                   <a
                     href="#"
@@ -337,11 +337,11 @@
               <img
                 src="./images/our-team/mich-ermak.jpg"
                 alt="Михаил Ермаков"
-                width="270"
+                width="100%"
               />
               <h3 class="team-list__title">Михаил Ермаков</h3>
               <p class="team-list__text">UI Designer</p>
-              <ul class="list flex network-list network-list--centered">
+              <ul class="list network-list">
                 <li class="network-list__item">
                   <a
                     href="#"
@@ -394,7 +394,7 @@
       <section class="section">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
-          <ul class="list flex clients-list">
+          <ul class="list clients-list">
             <li class="clients-list__item">
               <a href="#" class="link clients-list__link">
                 <svg width="44" height="50">
@@ -443,73 +443,54 @@
     </main>
     <!--Футер-->
     <footer class="footer">
-      <div class="container flex flex--baseline">
-        <div class="footer-address">
-          <a class="link logo logo--white" href="./index.html">
-            <span class="logo--accent">Web</span>Studio
-          </a>
-          <address class="footer-contacts">
-            <p class="footer-contacts__text">г. Киев, пр-т Леси Украинки, 26</p>
-            <a
-              class="link footer-contacts__link"
-              href="mailto:info@example.com"
-            >
-              info@example.com
-            </a>
-            <a class="link footer-contacts__link" href="tel:+380991111111"
-              >+38 099 111 11 11</a
-            >
-          </address>
-        </div>
-        <div class="footer-networks">
-          <strong class="footer-networks__text">присоединяйтесь</strong>
-          <ul class="list flex network-list">
-            <li class="network-list__item">
-              <a
-                href="#"
-                class="link network-list__link network-list__link--dark"
-                aria-label="Instagram"
-              >
-                <svg class="network-list__icon">
-                  <use href="./images/svg/sprite.svg#icon-instagram"></use>
-                </svg>
+      <div class="container flex flex-desktop">
+         <div class="flex-tablet">
+            <div class="footer-address">
+              <a class="link logo logo--white" href="./index.html">
+                <span class="logo--accent">Web</span>Studio
               </a>
-            </li>
-            <li class="network-list__item">
-              <a
-                href="#"
-                class="link network-list__link network-list__link--dark"
-                aria-label="Twitter"
-              >
-                <svg class="network-list__icon">
-                  <use href="./images/svg/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="network-list__item">
-              <a
-                href="#"
-                class="link network-list__link network-list__link--dark"
-                aria-label="Facebook"
-              >
-                <svg class="network-list__icon">
-                  <use href="./images/svg/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="network-list__item">
-              <a
-                href="#"
-                class="link network-list__link network-list__link--dark"
-                aria-label="Linkedin"
-              >
-                <svg class="network-list__icon">
-                  <use href="./images/svg/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+              <address class="footer-contacts">
+                <p class="footer-contacts__text">г. Киев, пр-т Леси Украинки, 26</p>
+                <a class="link footer-contacts__link" href="mailto:info@example.com">
+                  info@example.com
+                </a>
+                <a class="link footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </address>
+            </div>
+            <div class="footer-networks">
+              <strong class="footer-networks__text">присоединяйтесь</strong>
+              <ul class="list network-list">
+                <li class="network-list__item">
+                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Instagram">
+                    <svg class="network-list__icon">
+                      <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="network-list__item">
+                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Twitter">
+                    <svg class="network-list__icon">
+                      <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="network-list__item">
+                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Facebook">
+                    <svg class="network-list__icon">
+                      <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="network-list__item">
+                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Linkedin">
+                    <svg class="network-list__icon">
+                      <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+         </div>
         <form class="flex footer-subscribe" autocomplete="off">
           <label class="footer-subscribe__label"
             >Подпишитесь на рассылку
@@ -520,7 +501,7 @@
               placeholder="E-mail"
             />
           </label>
-          <button type="submit" class="button-primary button-primary--flex">
+          <button type="submit" class="button-primary button-primary--flex button-primary--centered">
             Подписаться
             <svg class="footer-subscribe__icon" width="24" height="24">
               <use href="./images/svg/sprite.svg#icon-subscribe"></use>
@@ -599,7 +580,7 @@
               <a href="#" class="form-data__policy-label--accent">Условия договора</a></label
             >
           </div>
-          <button type="submit" class="button-primary button-primary--modal">Отправить</button>
+          <button type="submit" class="button-primary button-primary--centered">Отправить</button>
         </form>
       </div>
     </div>

@@ -1,8 +1,8 @@
-*,
-*::before,
-*::after {
-  outline: 2px solid tomato;
-}
+// *,
+// *::before,
+// *::after {
+//   outline: 2px solid tomato;
+// }
 
 body {
   background-color: $main-bg-color;
@@ -58,6 +58,3 @@ svg {
   }
 }
 
-// .flex {
-//   @include flexbox;
-// }

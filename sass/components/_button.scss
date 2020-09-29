@@ -23,8 +23,9 @@
 
 .button-primary--flex {
   @include flexbox(center, center);
+  align-self: flex-end;
 }
 
-.button-primary--modal {
+.button-primary--centered {
   margin: 0 auto;
 }

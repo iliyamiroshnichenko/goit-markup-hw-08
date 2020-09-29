@@ -4,6 +4,10 @@
   }
 }
 
+.examples-list {
+    @include flexbox;
+}
+
 .examples-list__item {
   position: relative;
   flex-basis: calc((100% - 2 * 30px) / 3);
