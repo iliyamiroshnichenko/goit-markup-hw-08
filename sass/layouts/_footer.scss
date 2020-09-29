@@ -5,9 +5,9 @@
   background-color: $third-bg-color;
 }
 
-.flex--baseline {
-  @include flexbox(flex-start, baseline);
-}
+// .flex--baseline {
+//   @include flexbox(flex-start, baseline);
+// }
 
 .footer-address,
 .footer-networks {

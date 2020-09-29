@@ -1,15 +1,14 @@
 .header {
-  padding-top: 16px;
-  padding-bottom: 16px;
   @include font(inherit, 1.14, 500);
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
 }
 
-// .flex--ai-center,
-// .header-nav {
-//   @include flexbox(flex-start, center);
-// }
+.flex--nav {
+  @include for-size(tablet) {
+    @include flexbox(space-between, center);
+  }
+}
 
 .header-nav {
   display: none;
@@ -54,24 +53,33 @@
 }
 
 .header-contacts {
-   @media screen and (max-width: 767px) {
-    display: none;
+  display: none;
+
+  @include for-size(tablet) {
+    display: block;
   }
-  
-  display: flex;
-  margin-left: auto;
+
+  @media screen and (max-width:1199px) {
+    @include font(12px, 1.17, 500);
+  }
+
+   @include for-size(desktop) {
+    @include flexbox;
+  }
 }
 
 .header-contacts__item {
   &:not(:last-child) {
+     @include for-size(desktop) {
     margin-right: 30px;
+    }
   }
 }
 
 .header-contacts__link {
   @include flexbox(flex-start, center);
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: $second-text-color;
   transition: color $duration $timing-function, fill $duration $timing-function;
 
@@ -80,6 +88,7 @@
     color: $accent-color;
     fill: $accent-color;
   }
+
 }
 
 .header-contacts__icon {
