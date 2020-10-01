@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!--Хэдер-->
@@ -35,6 +35,19 @@
               <a class="link header-nav__link" href="#">Контакты</a>
             </li>
           </ul>
+          <button type="button" class="button-menu" data-menu-button>
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+              aria-expanded="false"
+              aria-controls="menu-container"
+            >
+              <use class="icon-burger" href="./images/svg/sprite.svg#icon-burger"></use>
+              <use class="icon-cross" href="./images/svg/sprite.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu></div>
         </nav>
         <ul class="list header-contacts">
           <li class="header-contacts__item">
@@ -444,53 +457,76 @@
     <!--Футер-->
     <footer class="footer">
       <div class="container flex flex-desktop">
-         <div class="flex-tablet">
-            <div class="footer-address">
-              <a class="link logo logo--white" href="./index.html">
-                <span class="logo--accent">Web</span>Studio
+        <div class="flex-tablet">
+          <div class="footer-address">
+            <a class="link logo logo--white" href="./index.html">
+              <span class="logo--accent">Web</span>Studio
+            </a>
+            <address class="footer-contacts">
+              <p class="footer-contacts__text">
+                г. Киев, пр-т Леси Украинки, 26
+              </p>
+              <a
+                class="link footer-contacts__link"
+                href="mailto:info@example.com"
+              >
+                info@example.com
               </a>
-              <address class="footer-contacts">
-                <p class="footer-contacts__text">г. Киев, пр-т Леси Украинки, 26</p>
-                <a class="link footer-contacts__link" href="mailto:info@example.com">
-                  info@example.com
+              <a class="link footer-contacts__link" href="tel:+380991111111"
+                >+38 099 111 11 11</a
+              >
+            </address>
+          </div>
+          <div class="footer-networks">
+            <strong class="footer-networks__text">присоединяйтесь</strong>
+            <ul class="list network-list">
+              <li class="network-list__item">
+                <a
+                  href="#"
+                  class="link network-list__link network-list__link--dark"
+                  aria-label="Instagram"
+                >
+                  <svg class="network-list__icon">
+                    <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                  </svg>
                 </a>
-                <a class="link footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
-              </address>
-            </div>
-            <div class="footer-networks">
-              <strong class="footer-networks__text">присоединяйтесь</strong>
-              <ul class="list network-list">
-                <li class="network-list__item">
-                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Instagram">
-                    <svg class="network-list__icon">
-                      <use href="./images/svg/sprite.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="network-list__item">
-                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Twitter">
-                    <svg class="network-list__icon">
-                      <use href="./images/svg/sprite.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="network-list__item">
-                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Facebook">
-                    <svg class="network-list__icon">
-                      <use href="./images/svg/sprite.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="network-list__item">
-                  <a href="#" class="link network-list__link network-list__link--dark" aria-label="Linkedin">
-                    <svg class="network-list__icon">
-                      <use href="./images/svg/sprite.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-         </div>
+              </li>
+              <li class="network-list__item">
+                <a
+                  href="#"
+                  class="link network-list__link network-list__link--dark"
+                  aria-label="Twitter"
+                >
+                  <svg class="network-list__icon">
+                    <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="network-list__item">
+                <a
+                  href="#"
+                  class="link network-list__link network-list__link--dark"
+                  aria-label="Facebook"
+                >
+                  <svg class="network-list__icon">
+                    <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="network-list__item">
+                <a
+                  href="#"
+                  class="link network-list__link network-list__link--dark"
+                  aria-label="Linkedin"
+                >
+                  <svg class="network-list__icon">
+                    <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <form class="flex footer-subscribe" autocomplete="off">
           <label class="footer-subscribe__label"
             >Подпишитесь на рассылку
@@ -501,7 +537,10 @@
               placeholder="E-mail"
             />
           </label>
-          <button type="submit" class="button-primary button-primary--flex button-primary--centered">
+          <button
+            type="submit"
+            class="button-primary button-primary--flex button-primary--centered"
+          >
             Подписаться
             <svg class="footer-subscribe__icon" width="24" height="24">
               <use href="./images/svg/sprite.svg#icon-subscribe"></use>
@@ -512,12 +551,14 @@
     </footer>
     <div class="backdrop backdrop--hidden" data-modal>
       <div class="modal">
-        <button class="button-close" data-modal-close>
+        <button type="button" class="button-close" data-modal-close>
           <svg width="11" height="11">
             <use href="./images/svg/sprite.svg#icon-close-modal"></use>
           </svg>
         </button>
-        <strong class="modal__text">Оставьте свои данные, мы вам перезвоним</strong>
+        <strong class="modal__text"
+          >Оставьте свои данные, мы вам перезвоним</strong
+        >
         <form class="form-data" autocomplete="off">
           <div class="form-data__field">
             <label for="modal-name" class="form-data__label">Имя</label>
@@ -537,7 +578,12 @@
           <div class="form-data__field">
             <label for="modal-tel" class="form-data__label">Телефон</label>
             <div class="form-data__block">
-              <input type="tel" class="form-data__input" name="tel" id="modal-tel" />
+              <input
+                type="tel"
+                class="form-data__input"
+                name="tel"
+                id="modal-tel"
+              />
               <svg class="form-data__icon">
                 <use href="./images/svg/sprite.svg#icon-modalform-tel"></use>
               </svg>
@@ -558,7 +604,9 @@
             </div>
           </div>
           <div class="form-data__field">
-            <label for="modal-comment" class="form-data__label">Комментарий</label>
+            <label for="modal-comment" class="form-data__label"
+              >Комментарий</label
+            >
             <textarea
               class="form-data__input form-data__input--comment"
               name="commment"
@@ -577,13 +625,18 @@
               />
               <span class="form-data__checkbox-custom"></span>
               Соглашаюсь с рассылкой и принимаю
-              <a href="#" class="form-data__policy-label--accent">Условия договора</a></label
+              <a href="#" class="form-data__policy-label--accent"
+                >Условия договора</a
+              ></label
             >
           </div>
-          <button type="submit" class="button-primary button-primary--centered">Отправить</button>
+          <button type="submit" class="button-primary button-primary--centered">
+            Отправить
+          </button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>

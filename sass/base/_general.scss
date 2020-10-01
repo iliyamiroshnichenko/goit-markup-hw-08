@@ -1,7 +1,6 @@
 // *,
-// *::before,
-// *::after {
-//   outline: 2px solid tomato;
+// ::before, ::after {
+//   outline: 1px solid red;
 // }
 
 body {
@@ -46,15 +45,14 @@ svg {
   margin: 0px auto;
 
   @include for-size(mobile) {
-    width: 480px;
+    width: $mobile;
   }
 
   @include for-size(tablet) {
-    width: 768px;
+    width: $tablet;
   }
 
-   @include for-size(desktop) {
-    width: 1200px;
+  @include for-size(desktop) {
+    width: $desktop;
   }
 }
-

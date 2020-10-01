@@ -1,13 +1,16 @@
 .header {
+  position: relative;
   @include font(inherit, 1.14, 500);
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: $tablet - 1) {
+    padding: 10px 0;
+  }
 }
 
 .flex--nav {
-  @include for-size(tablet) {
-    @include flexbox(space-between, center);
-  }
+  @include flexbox(space-between, center);
 }
 
 .header-nav {
@@ -59,19 +62,19 @@
     display: block;
   }
 
-  @media screen and (max-width:1199px) {
+  @media screen and (max-width: $desktop - 1) {
     @include font(12px, 1.17, 500);
   }
 
-   @include for-size(desktop) {
+  @include for-size(desktop) {
     @include flexbox;
   }
 }
 
 .header-contacts__item {
   &:not(:last-child) {
-     @include for-size(desktop) {
-    margin-right: 30px;
+    @include for-size(desktop) {
+      margin-right: 30px;
     }
   }
 }
@@ -88,10 +91,55 @@
     color: $accent-color;
     fill: $accent-color;
   }
-
 }
 
 .header-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.button-menu {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  fill: #000000;
+  transition: fill $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.icon-cross {
+  display: none;
+}
+
+.button-menu.is-open .icon-cross {
+  display: block;
+}
+
+.button-menu.is-open .icon-burger {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  background-color: turquoise;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+
+  &.is-open {
+    display: block;
+  }
 }
