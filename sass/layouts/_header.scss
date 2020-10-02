@@ -1,42 +1,70 @@
 .header {
   position: relative;
-  @include font(inherit, 1.14, 500);
+  @include font(18px, 1.17, 500);
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
+
+  @include for-size(tablet) {
+    @include font(inherit, 1.14, 500);
+  }
 
   @media screen and (max-width: $tablet - 1) {
     padding: 10px 0;
   }
 }
 
-.flex--nav {
+.flex--header {
   @include flexbox(space-between, center);
-}
+ }
 
 .header-nav {
-  display: none;
+  @media (max-width: $tablet - 1) {
+    margin-bottom: 60px;
+  }
+
   @include for-size(tablet) {
     @include flexbox(flex-start, center);
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop - 1) {
+    margin-left: 88px;
+    margin-right: 84px;
+  }
+
+  @include for-size(desktop) {
+     margin-left: 93px;
+    margin-right: 305px;
   }
 }
 
 .header-nav__item {
-  &:not(:last-child) {
-    margin-right: 50px;
+  @media (max-width: $tablet - 1) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include for-size(tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
 .header-nav__link {
   position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: inline-block;
+  padding: 8px 0;
   color: inherit;
   transition: color $duration $timing-function;
 
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @include for-size(tablet) {
+    padding: 32px 0;
   }
 }
 
@@ -56,15 +84,9 @@
 }
 
 .header-contacts {
-  display: none;
-
-  @include for-size(tablet) {
-    display: block;
-  }
-
-  @media screen and (max-width: $desktop - 1) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
     @include font(12px, 1.17, 500);
-  }
+      }
 
   @include for-size(desktop) {
     @include flexbox;
@@ -72,15 +94,21 @@
 }
 
 .header-contacts__item {
-  &:not(:last-child) {
-    @include for-size(desktop) {
+  @media (max-width: $tablet - 1) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include for-size(desktop) {
+    &:not(:last-child) {
       margin-right: 30px;
     }
   }
 }
 
 .header-contacts__link {
-  @include flexbox(flex-start, center);
+  @include flexbox(center, center);
   padding-top: 5px;
   padding-bottom: 5px;
   color: $second-text-color;
@@ -130,16 +158,24 @@
 }
 
 .menu-container {
-  display: none;
-  background-color: turquoise;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 60px 0;
+  background-color: $main-bg-color;
   text-align: center;
 
-  &.is-open {
-    display: block;
+  @media (max-width: $tablet - 1) {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 60px 0;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @include for-size(tablet) {
+    @include flexbox(space-between, center);
   }
 }

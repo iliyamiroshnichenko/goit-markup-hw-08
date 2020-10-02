@@ -13,10 +13,11 @@
   <body>
     <!--Хэдер-->
     <header class="header">
-      <div class="container flex flex--nav">
+      <div class="container flex flex--header">
         <a class="link logo logo--black" href="./index.html">
           <span class="logo--accent">Web</span>Studio
         </a>
+        <div class="menu-container" id="menu-container" data-menu>
         <nav>
           <ul class="list header-nav">
             <li class="header-nav__item">
@@ -35,25 +36,6 @@
               <a class="link header-nav__link" href="#">Контакты</a>
             </li>
           </ul>
-          <button type="button" class="button-menu" data-menu-button>
-            <svg
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню"
-              aria-expanded="false"
-              aria-controls="menu-container"
-            >
-              <use
-                class="icon-burger"
-                href="./images/svg/sprite.svg#icon-burger"
-              ></use>
-              <use
-                class="icon-cross"
-                href="./images/svg/sprite.svg#icon-close-menu"
-              ></use>
-            </svg>
-          </button>
-          <div class="menu-container" id="menu-container" data-menu></div>
         </nav>
         <ul class="list header-contacts">
           <li class="header-contacts__item">
@@ -76,6 +58,14 @@
             >
           </li>
         </ul>
+        </div>
+        <button type="button" class="button-menu" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню" aria-expanded="false"
+            aria-controls="menu-container">
+            <use class="icon-burger" href="./images/svg/sprite.svg#icon-burger"></use>
+            <use class="icon-cross" href="./images/svg/sprite.svg#icon-close-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
