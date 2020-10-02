@@ -1,16 +1,27 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  height: 581px;
-
-  padding: 40px 0;
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;
   background-color: $main-bg-color;
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   transition: transform $duration $timing-function;
+
+  @include for-size(mobile) {
+    max-width: 450px;
+  }
+
+  @include for-size(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @include for-size(desktop) {
+    max-width: 528px;
+  }
 }
 
 .button-close {
@@ -37,6 +48,10 @@
 .modal__text {
   display: block;
   margin-bottom: 12px;
-  @include font(20px, 1.15, 700);
+  @include font(20px, 1.5, 700);
   text-align: center;
+
+  @include for-size(desktop) {
+    line-height: 1.15;
+  }
 }
