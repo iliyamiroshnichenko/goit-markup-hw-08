@@ -13,6 +13,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
 
   transform: translateY(100%);
   transition: transform $duration $timing-function;

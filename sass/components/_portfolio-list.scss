@@ -46,6 +46,7 @@
 
   &:hover .portfolio-card__overlay,
   &:focus .portfolio-card__overlay {
+    opacity: 1;
     transform: translateY(0);
   }
 }
