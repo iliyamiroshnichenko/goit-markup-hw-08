@@ -34,20 +34,4 @@ svg {
   overflow: hidden;
 }
 
-.container {
-  width: 100%;
-  padding: 0px 15px;
-  margin: 0px auto;
 
-  @include for-size(mobile) {
-    width: $mobile;
-  }
-
-  @include for-size(tablet) {
-    width: $tablet;
-  }
-
-  @include for-size(desktop) {
-    width: $desktop;
-  }
-}

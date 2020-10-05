@@ -10,7 +10,7 @@
 
 .flex-tablet {
   @include for-size(tablet) {
-    @include flexbox(flex-start, baseline);
+    @include flexbox(space-around, baseline);
   }
 }
 
@@ -21,11 +21,6 @@
 }
 
 .footer-address {
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
-    margin-left: 76px;
-    margin-right: 165px;
-  }
-
   @include for-size(desktop) {
     width: 270px;
     margin-right: 30px;

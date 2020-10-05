@@ -27,8 +27,8 @@
   }
 
   @media (min-width: $tablet) and (max-width: $desktop - 1) {
-    margin-left: 88px;
-    margin-right: 84px;
+    margin-left: 79px;
+    margin-right: 75px;
   }
 
   @include for-size(desktop) {
@@ -108,7 +108,8 @@
 }
 
 .header-contacts__link {
-  @include flexbox(center, center);
+  display: inline-flex;
+  align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
   color: $second-text-color;
