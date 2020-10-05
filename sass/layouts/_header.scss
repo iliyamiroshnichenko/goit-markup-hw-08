@@ -27,13 +27,13 @@
   }
 
   @media (min-width: $tablet) and (max-width: $desktop - 1) {
-    margin-left: 79px;
-    margin-right: 75px;
+    margin-left: 70px;
+    margin-right: 67px;
   }
 
   @include for-size(desktop) {
      margin-left: 93px;
-    margin-right: 305px;
+    margin-right: 287px;
   }
 }
 
