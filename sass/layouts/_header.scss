@@ -86,6 +86,7 @@
 .header-contacts {
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
     @include font(12px, 1.17, 500);
+    text-align: left;
       }
 
   @include for-size(desktop) {
