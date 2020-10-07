@@ -753,10 +753,10 @@ svg {
 
 @media (min-width: 1200px) {
   .portfolio-list__item {
-    flex-basis: calc((100% - 2 * 30px) / 3);
+    flex-basis: calc((100% - 2 * 27px) / 3);
   }
   .portfolio-list__item:not(:nth-child(3n)) {
-    margin-right: 30px;
+    margin-right: 27px;
   }
   .portfolio-list__item:nth-last-child(n + 4) {
     margin-bottom: 30px;
@@ -909,7 +909,7 @@ svg {
 
 @media (min-width: 1200px) {
   .footer-networks {
-    margin-right: 93px;
+    margin-right: 75px;
   }
 }
 

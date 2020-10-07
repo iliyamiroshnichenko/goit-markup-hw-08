@@ -22,9 +22,9 @@
   }
 
   @include for-size(desktop) {
-    flex-basis: calc((100% - 2 * 30px) / 3);
+    flex-basis: calc((100% - 2 * 27px) / 3);
     &:not(:nth-child(3n)) {
-      margin-right: 30px;
+      margin-right: 27px;
     }
 
     &:nth-last-child(n + 4) {
